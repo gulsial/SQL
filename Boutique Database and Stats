@@ -1,0 +1,24 @@
+--Created database with items in the boutique--
+CREATE TABLE boutique (item INTEGER PRIMARY KEY, name TEXT, condition TEXT, color TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO boutique VALUES(1, "socks", "new", "white", 10, 5); 
+INSERT INTO boutique VALUES(2, "belts", "new", "black", 20, 15);
+INSERT INTO boutique VALUES(3, "shirts", "new", "red", 12, 20);
+INSERT INTO boutique VALUES(4, "pants", "new", "black", 30, 30);
+INSERT INTO boutique VALUES(5, "jackets", "new", "black", 8, 50);
+INSERT INTO boutique VALUES(6, "jackets", "used", "black", 2, 15);
+INSERT INTO boutique VALUES(7, "scarves", "new", "pink", 3, 10);
+INSERT INTO boutique VALUES(8, "gloves", "new", "brown", 6, 16);
+INSERT INTO boutique VALUES(9, "hats", "new", "purple", 3, 12); 
+INSERT INTO boutique VALUES(10, "boots", "new", "black", 8, 35);
+INSERT INTO boutique VALUES(11, "flip flops", "new", "white", 7, 10);
+INSERT INTO boutique VALUES(12, "earrings", "new", "gold", 4, 21);
+INSERT INTO boutique VALUES(13, "rings", "new", "gold", 7, 9);
+INSERT INTO boutique VALUES(14, "bracelets", "new", "silver", 2, 5);
+INSERT INTO boutique VALUES(15, "necklaces", "new", "silver", 3, 16);
+SELECT * FROM boutique;
+
+--Ordered items in database by price--
+SELECT * FROM boutique ORDER BY price;
+
+--Listed items in database that are below $25--
+SELECT * FROM boutique WHERE price < 25;
