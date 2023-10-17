@@ -79,3 +79,9 @@ SELECT company_name, maternity_leave_weeks
 FROM fortune_companies
 WHERE maternity_leave_weeks >= 10
 ORDER BY maternity_leave_weeks DESC;
+
+#4. What is the minimum paid time off offered in the technology sector?
+SELECT industry, MIN(paid_time_off_days) AS PTO
+FROM fortune_companies
+GROUP BY industry
+ORDER BY PTO DESC;
